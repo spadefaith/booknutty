@@ -29,18 +29,24 @@ class HomeController{
     obj._id = String(new Date().getTime());
     obj = Object.assign(obj, this.searchCache);
     
-    
-    console.log(obj);
-    
-    
-    
-    this.formSearch.form.reset();
-    this.searchCache = {};
-    swal({
-      title: 'Successful',
-      text: 'Your order is successfully booked!',
-      icon: 'success',
-    })
+    let scriptURL = 'https://script.google.com/macros/s/AKfycbx35_aNAbNP1gwQdSn4M0UALg2MUHAQ8v8n451KYrWeucchPqG2/exec';
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        swal({
+          title: 'Successful',
+          text: 'Your order is successfully booked!',
+          icon: 'success',
+        })
+        this.formSearch.form.reset();
+        this.searchCache = {};
+      })
+      .catch(error => {        
+        swal({
+          title: 'Something went wrong!',
+          text: 'Check your internet connection and try again!',
+          icon: 'error',
+        })
+     })
   }
   _bookCloseHandler(){
     console.log('closed');
