@@ -26,19 +26,26 @@ class HomeController{
     }
   }
   _bookHandler(obj){
+    
     obj._id = String(new Date().getTime());
+    
+    console.log(JSON.parse(JSON.stringify(obj)), JSON.parse(JSON.stringify(this.searchCache));
+    
     obj = Object.assign(obj, this.searchCache);
     // Create a test FormData object
     var formData = new FormData();
     
-    console.log(obj)
+    
     for (let key in obj){
       formData.append(key, obj[key]);
     }
-    // Display the key/value pairs
     for(var pair of formData.entries()) {
        console.log(pair[0]+ ', '+ pair[1]);
     }
+    // Display the key/value pairs
+    /*
+
+    
 
     let scriptURL = 'https://script.google.com/macros/s/AKfycbx35_aNAbNP1gwQdSn4M0UALg2MUHAQ8v8n451KYrWeucchPqG2/exec';
     fetch(scriptURL, { method: 'POST', body: formData})
@@ -62,6 +69,7 @@ class HomeController{
         })
         console.log(error);
      })
+     */
   }
   _bookCloseHandler(){
     console.log('closed');
