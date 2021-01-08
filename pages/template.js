@@ -150,7 +150,7 @@ const Templates = {
   footer:`
     <div class='footer-container'>
       <div class='footer-brand'>
-        <img class='footer-avatar' src='img/image002.jpg' width= 40 height=40>
+        <img class='footer-avatar' src='img/image001.jpg' width= 40 height=40>
         <div class='footer-brand-name'>
           <span>Black</span><span class='brand-box'>Box</span><span>&nbsp</span><span>Haul Off</span>
         </div>
@@ -169,10 +169,9 @@ const Templates = {
       </div>
       <div class='footer-social'>
         <div class='footer-name'>Follow Us</div>
-        <a class="fa fa-facebook-square" href='facebook.com' target='_blank' title='facebook'>
-        </a>
-        <a class="fa fa-twitter-square" href='twitter.com' target='_blank' title='twitter'></a>
-        <a class="fa fa-youtube" href='youtube.com' target='_blank' title='youtube'></a>
+        <a class="fb" href='facebook.com' target='_blank' title='facebook'></a>
+        <a class="tw" href='twitter.com' target='_blank' title='twitter'></a>
+        <a class="yt" href='youtube.com' target='_blank' title='youtube'></a>
       </div>
       <div class='footer-copy'>
         <p>Copyright © 2020 BlackBox Haul Off. All rights reserved.</p>
