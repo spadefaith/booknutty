@@ -28,7 +28,19 @@ class HomeController{
   _bookHandler(obj){
     obj._id = String(new Date().getTime());
     obj = Object.assign(obj, this.searchCache);
+    
+    
     console.log(obj);
+    
+    
+    
+    this.formSearch.form.reset();
+    this.searchCache = {};
+    swal({
+      title: 'Successful',
+      text: 'Your order is successfully booked!',
+      icon: 'success',
+    })
   }
   _bookCloseHandler(){
     console.log('closed');
