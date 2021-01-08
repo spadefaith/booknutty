@@ -46,6 +46,7 @@ class HomeController{
           text: 'Check your internet connection and try again!',
           icon: 'error',
         })
+        console.log(eror);
      })
   }
   _bookCloseHandler(){
