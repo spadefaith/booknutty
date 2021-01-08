@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackBox Haul Off</title>
+  <link rel="icon" href="img/image001.jpg" type="image/gif" sizes="16x16"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+</head>
+<body>
+  <article class='body'>
+    <header class='body-header'></header>
+    <section class='body-content'></section>
+    <footer class='body-footer'></footer>
+  </article>
+  <script src='loader.js'></script>
+  <script>
+    const loader = new LibraryLoader;
+
+    loader.register('common', 'scripts/common/component.js');
+    loader.register('common', 'scripts/common/router.js');
+    loader.register('common', 'scripts/common/spinner.js');
+    loader.register('common', 'scripts/common/tools-array.js');
+    loader.register('common', 'scripts/common/tools-html.js');
+    loader.register('common', 'scripts/common/tools-object.js');
+    loader.register('common', 'scripts/common/tools-string.js');
+    loader.register('common', 'scripts/common/url-parser.js');
+
+
+    loader.register('pages', 'pages/template.js');
+
+    loader.register('pages', 'pages/page-header.js');
+    loader.register('pages', 'pages/page-footer.js');
+
+    loader.register('pages', 'pages/home/home-controller.js');
+    loader.register('pages', 'pages/home/home-form-container.js');
+    loader.register('pages', 'pages/home/home-form.js');
+
+
+
+    loader.register('styles', 'styles/colors.css');
+    loader.register('styles', 'styles/lay-body.css');
+    loader.register('styles', 'styles/lay-footer.css');
+    loader.register('styles', 'styles/lay-header.css');
+    loader.register('styles', 'styles/lay-form.css');
+    loader.register('styles', 'styles/lay-form-search.css');
+    loader.register('styles', 'styles/lay-form-book.css');
+    
+    loader.load([
+      'styles',
+      'common',
+      'pages',
+    ])
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+*{
+  box-sizing:border-box;
+}
+.form .title{
+  font-size: 1.5rem!important;
+  font-weight: 600;
+}
+/*#353536*/
+.booking.form-container{
+  display: grid;
+  /*background-image: url('../img/citywall.jpg');*/
+  background-color: #fefefe;
+}
+.booking .form-caption-container{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 50vh;
+}
+.booking .form-caption{
+  font-size: 1.3rem;
+  text-align: center;
+  width: 80vw;
+}
+
+.booking .button-container{
+  text-align: center;
+}
+.booking .button-container>.is-success{
+  font-size: 1.8rem;
+  margin: 1rem 2rem;
+  }
+.booking .form{
+  padding: 1rem 1rem;
+  margin: 0.5rem 0.5rem;
+}
+.booking.form.search{
+  background-color: unset;
+}
+.booking.form.search .yard>.select,
+.booking.form.search .yard>.select>select{
+  width: 100%;
+}
+.booking .input-container{
+  margin: 5px 4px;
+  display: inline-grid;
+}
+.booking .input-container .input,
+.booking .input-container .select,
+.booking .input-container select{
+  height: 3.9rem;
+}
+.booking .input-container .input,
+.booking .input-container select{
+  font-size: 1.5rem!important;
+  background-color: hsl(0, 0%, 97%);
+}
+.booking .input-container.block{
+  width: 100%;
+}
+.booking .input-container .option-title{
+  border-bottom: 1px dotted black;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.booking .control-info{
+  font-size: 0.8rem;
+  margin: 15px 0px 0px 1rem;
+}
+.booking .radio-container{
+  display: inline-grid;
+  width: max-content;
+}
+.booking .radio-container.horizontal{
+  grid-auto-flow: column;
+  grid-column-gap: 4rem;
+}
+.booking .radio-container>div{
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+.booking .radio-container input{
+  width: 1rem;
+  height: 0.859rem;
+}
+/* Larger than mobile */
+@media (min-width: 400px) and (max-width: 550px) {
+
+}
+/* Larger than tablet */
+
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+

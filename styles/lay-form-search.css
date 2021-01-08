@@ -1,0 +1,84 @@
+.booking .form.search{
+  display: grid;
+  grid-template-areas:
+    "title"
+    "waste"
+    "date"
+    "zip"
+    "size"
+    "button";
+}
+.booking .form.search{
+  background-color: white;
+}
+.booking .form.search>h1:nth-child(1){
+  grid-area: title;
+}
+.booking .form p{
+  grid-area: caption;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 1.8rem 7rem;
+}
+.booking .form.search>.input-container:nth-child(3){
+  grid-area: waste;
+}
+.booking .form.search>.input-container:nth-child(4){
+  grid-area: date;
+}
+.booking .form.search>.input-container:nth-child(5){
+  grid-area: zip;
+}
+.booking .form.search>.input-container:nth-child(6){
+  grid-area: size;
+}
+.booking .form.search>.button-container:nth-child(7){
+  grid-area: button;
+}
+/* Larger than mobile */
+@media (max-width: 689px) {
+  .booking .form.search{
+    grid-template-areas:
+      "title"
+      "caption"
+      "waste"
+      "date"
+      "zip"
+      " size"
+      "button";
+    width: 80vw;
+    justify-self: center;
+    justify-content: center;
+  }
+  .booking .form.search p{
+    margin:3rem 0rem;;
+  }
+}
+/* Larger than tablet */
+
+
+/* Larger than desktop */
+@media (min-width: 690px) {
+  .booking .form.search{
+    grid-template-areas:
+      "title title title"
+      "caption caption caption"
+      "waste waste waste"
+      "date zip size"
+      "button button button";
+    width: 80vw;
+    justify-self: center;
+  }
+  .booking .form.search .input,
+  .booking .form.search .select{
+    font-size: 1.3rem;
+  }
+  .booking .form-caption{
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .form .title{
+    font-size: 2rem!important;
+  } 
+}
+

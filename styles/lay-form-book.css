@@ -1,0 +1,44 @@
+.modal{
+  z-index: 5000;
+}
+.modal>form{
+  overflow: auto;
+  padding: 1rem;
+  margin-top: 60px!important;
+  height: 85vh;
+  width: 95vw;
+  background-color: white!important;
+  z-index: 6000;
+  padding: 1rem 1rem!important;
+}
+.modal> form .label{
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.modal> form> .input-group{
+  display: grid;
+  grid-template-areas: 
+    "name"
+    "contact"
+    "email"
+    "address";
+}
+.modal> form> .input-group>.input-container:nth-child(1){
+  grid-area: name;
+}
+.modal> form> .input-group>.input-container:nth-child(2){
+  grid-area: contact;
+}
+.modal> form> .input-group>.input-container:nth-child(3){
+  grid-area: email;
+}
+.modal> form> .input-group>.input-container:nth-child(4){
+  grid-area: address;
+}
+@media (min-width: 600px) {
+.modal> form> .input-group{
+  grid-template-areas: 
+    "name contact email"
+    "address address address";
+}
+}

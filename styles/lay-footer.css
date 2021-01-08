@@ -1,0 +1,84 @@
+.footer-container{
+  background-color: #0e1212;
+  color: white;
+  display: grid;
+  grid-template-areas:
+     "brand about contact social"
+    "copy copy copy copy";
+  padding: 1rem;
+}
+
+/*brand*/
+.footer-brand{
+  grid-area: brand;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: max-content 1fr;
+  grid-column-gap: 4px;
+  font-size: 2rem;
+  align-items: center;
+}
+.footer-brand>.footer-avatar{
+  margin-left: 1rem;
+}
+.footer-brand>.footer-brand-name>.brand-box{
+  color: #db0300;
+}
+.footer-about{
+  grid-area: about;
+}
+.footer-Contact{
+  grid-area: contact;
+}
+
+.footer-copy{
+  grid-area: copy;
+  display: grid;
+  border-top: 1px solid white;
+  
+}
+/*******/
+/***social***/
+.footer-social{
+  grid-area: social;
+}
+
+/************/
+
+.footer-name{
+  font-size: 1.1rem;
+  margin: 1.5rem 0.1rem;
+}
+.footer-items{
+  padding: 0.8rem;
+}
+.footer-copy{
+  margin-top: 10rem;
+  padding: 1.5rem;
+}
+.footer-social{
+  font-size: 2.8rem;
+}
+.footer-social a{
+  margin: 5px;
+}
+
+@media (max-width: 810px){
+  .footer-container{
+    grid-template-areas:
+       
+        "about"
+        "contact"
+        "social"
+        "brand"
+        "copy";
+  }
+  .footer-container>div{
+    margin: 1rem 0rem 0rem 3rem;
+    
+  }
+  .footer-container .footer-items:hover{
+    background-color: white;
+    color: black;
+  }
+}
