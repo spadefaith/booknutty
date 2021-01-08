@@ -82,3 +82,6 @@
     color: black;
   }
 }
+.footer-social a{
+    background: url("../img/icons.png") no-repeat;
+}
