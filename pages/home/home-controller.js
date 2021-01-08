@@ -29,7 +29,7 @@ class HomeController{
     
     obj._id = String(new Date().getTime());
     
-    console.log(JSON.parse(JSON.stringify(obj)), JSON.parse(JSON.stringify(this.searchCache));
+    console.log(JSON.parse(JSON.stringify(obj)), JSON.parse(JSON.stringify(this.searchCache)));
     
     obj = Object.assign(obj, this.searchCache);
     // Create a test FormData object
