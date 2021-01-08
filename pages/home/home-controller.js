@@ -31,6 +31,7 @@ class HomeController{
     // Create a test FormData object
     var formData = new FormData();
     
+    console.log(obj)
     for (let key in obj){
       formData.append(key, obj[key]);
     }
