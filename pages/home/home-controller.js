@@ -38,6 +38,7 @@ class HomeController{
           icon: 'success',
         })
         this.formSearch.elements.form.reset();
+        this.formBook.elements.form.reset();
         this.searchCache = {};
       })
       .catch(error => {
