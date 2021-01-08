@@ -37,7 +37,7 @@ class HomeController{
           text: 'Your order is successfully booked!',
           icon: 'success',
         })
-        this.formSearch.form.reset();
+        this.formSearch.elements.form.reset();
         this.searchCache = {};
       })
       .catch(error => {
