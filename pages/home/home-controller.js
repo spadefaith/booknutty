@@ -40,7 +40,8 @@ class HomeController{
         this.formSearch.form.reset();
         this.searchCache = {};
       })
-      .catch(error => {        
+      .catch(error => {
+        console.log(swal);
         swal({
           title: 'Something went wrong!',
           text: 'Check your internet connection and try again!',
