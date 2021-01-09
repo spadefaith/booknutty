@@ -22,6 +22,7 @@
 }
 .booking .form.search>.input-container:nth-child(3){
   grid-area: waste;
+  text-align: center;
 }
 .booking .form.search>.input-container:nth-child(4){
   grid-area: date;
