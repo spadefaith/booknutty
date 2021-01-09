@@ -69,6 +69,7 @@ class HomeController{
         this.formSearch.elements.form.reset();
         this.formBook.elements.form.reset();
         this.searchCache = {};
+      ` this.formBook.elements.container.remove();
       })
       .catch(error => {
         console.log(swal);
