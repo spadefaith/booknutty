@@ -48,7 +48,10 @@ class HomeController{
     
     
     for (let key in combined){
-      formData.append(key, combined[key]);
+      if (combined.hasOwnProperty(key)){
+        formData.append(key, combined[key]);
+      }
+      
     }
     for(var pair of formData.entries()) {
        console.log(pair[0]+ ', '+ pair[1]);
