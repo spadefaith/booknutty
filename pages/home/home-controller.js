@@ -28,16 +28,25 @@ class HomeController{
   _bookHandler(obj){
     
     obj._id = String(new Date().getTime());
+    obj = Object.entries(obj);
+    this.searchCache = Object.entries(this.searchCache);
     
-    console.log(JSON.parse(JSON.stringify(obj)), JSON.parse(JSON.stringify(this.searchCache)));
+    let combined = obj.concat(this.searchCache);
     
-    obj = Object.assign(obj, this.searchCache);
+    combined = combined.reduce((accu, iter)=>{
+      let [key, value] = iter;
+      accu[key] = value;
+      return accu;
+    }, {})
+    
+    console.log(JSON.parse(combined);
+
     // Create a test FormData object
     var formData = new FormData();
     
     
-    for (let key in obj){
-      formData.append(key, obj[key]);
+    for (let key in combined){
+      formData.append(key, combined[key]);
     }
     for(var pair of formData.entries()) {
        console.log(pair[0]+ ', '+ pair[1]);
