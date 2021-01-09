@@ -31,6 +31,8 @@ class HomeController{
     obj = Object.entries(obj);
     this.searchCache = Object.entries(this.searchCache);
     
+    console.log(obj, this.searchCache);
+    
     let combined = obj.concat(this.searchCache);
     
     combined = combined.reduce((accu, iter)=>{
