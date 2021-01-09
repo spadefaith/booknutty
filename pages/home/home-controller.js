@@ -39,7 +39,7 @@ class HomeController{
       return accu;
     }, {})
     
-    console.log(JSON.parse(combined));
+    console.log(combined);
 
     // Create a test FormData object
     var formData = new FormData();
