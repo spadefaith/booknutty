@@ -53,7 +53,7 @@ class HomeController{
        console.log(pair[0]+ ', '+ pair[1]);
     }
     // Display the key/value pairs
-    /*
+    
 
     
 
@@ -79,7 +79,7 @@ class HomeController{
         })
         console.log(error);
      })
-     */
+     
   }
   _bookCloseHandler(){
     console.log('closed');
