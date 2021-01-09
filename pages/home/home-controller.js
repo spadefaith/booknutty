@@ -31,21 +31,17 @@ class HomeController{
     obj = Object.entries(obj);
     this.searchCache = Object.entries(this.searchCache);
     
-    console.log(obj, this.searchCache);
-    
     let combined = obj.concat(this.searchCache);
     
     combined = combined.reduce((accu, iter)=>{
       let [key, value] = iter;
-      accu[key] = value;
+      accu[key] = value || "";
       return accu;
     }, {})
-    
-    console.log(combined);
+
 
     // Create a test FormData object
     var formData = new FormData();
-    
     
     for (let key in combined){
       if (combined.hasOwnProperty(key)){
