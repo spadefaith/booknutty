@@ -57,7 +57,7 @@ class HomeController{
 
     
 
-    let scriptURL = 'https://script.google.com/macros/s/AKfycbx35_aNAbNP1gwQdSn4M0UALg2MUHAQ8v8n451KYrWeucchPqG2/exec';
+    let scriptURL = 'https://script.google.com/macros/s/AKfycbzQ0bMHhoP6N0z5jSgtNzeiVgVGwqYdn2ZubUJzgZur/dev?message=hello';
     fetch(scriptURL, { method: 'POST', body: formData})
       .then(response => {
         console.log(response)
