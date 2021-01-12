@@ -3,7 +3,7 @@
 		super();
 		this.isConnected = this.connected;
 		this.template = `
-		      <div class='loader-container'>
+		      <div class='loader-container' data-name='container'>
 			<div class='loader-content'>
 			  <div class='loader is-loading'></div>
 			</div>
