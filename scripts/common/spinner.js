@@ -3,20 +3,23 @@
 		super();
 		this.isConnected = this.connected;
 		this.template = (type)=>{
-			return `<div data-name='container' class='modal spinner-modal is-active'>
-			<div class='modal-background spinner-background'></div>
-			<div class='loader${type}'></div>
-		</div>`
+			return `
+		      <div class='loader-container'>
+			<div class='loader-content'>
+			  <div class='loader is-loading'></div>
+			</div>
+		      </div>
+		    `
 		}
 		this.active = new Array;
 	}
 	connected(){}
-	render(type=1,increment){
+	render(increment){
 		increment = increment == undefined;
 		if (increment){
 			this.active.length += 1;
 		}
-		!document.querySelector('.spinner-modal') && this.toElement(this.template(type)).appendTo(document.body, false);
+		!document.querySelector('.loader-container') && this.toElement(this.template).appendTo(document.body, false);
 	}
 	remove(){
 		if (this.active.length){
