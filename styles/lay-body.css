@@ -33,7 +33,7 @@
   align-content: center;
   justify-content: center;
   background-color: rgba(0,0,0,0.5);
-  z-index: 1000;
+  z-index: 10000;
 }
 .loader-content{
   font-size: 5rem;
