@@ -38,28 +38,11 @@ class HomeController{
       accu[key] = value || "";
       return accu;
     }, {})
-
-
-    // Create a test FormData object
-    var formData = new FormData();
     
-    for (let key in combined){
-      if (combined.hasOwnProperty(key)){
-        formData.append(key, combined[key]);
-      }
-      
-    }
-    for(var pair of formData.entries()) {
-       console.log(pair[0]+ ', '+ pair[1]);
-    }
-    // Display the key/value pairs
-    
-
-    
-
-    let scriptURL = 'https://script.google.com/macros/s/AKfycbzQ0bMHhoP6N0z5jSgtNzeiVgVGwqYdn2ZubUJzgZur/dev?message=hello';
-    fetch(scriptURL, { method: 'POST', body: formData})
-      .then(response => {
+    var url = new URL('https://script.google.com/macros/s/AKfycbz4wg0weFO7m8ByMP4lkNZaLpxv0IDxKaTMSIFtR2ozPamiIp8/exec'),
+    params = combined;
+    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+    fetch(url).then(response=>{
         console.log(response)
         swal({
           title: 'Successful',
@@ -70,16 +53,15 @@ class HomeController{
         this.formBook.elements.form.reset();
         this.searchCache = {};
         this.formBook.elements.container.remove();
-      })
-      .catch(error => {
+    }).catch((e)=>{
         console.log(swal);
         swal({
           title: 'Something went wrong!',
           text: 'Check your internet connection and try again!',
           icon: 'error',
         })
-        console.log(error);
-     })
+        console.log(e);
+    })
      
   }
   _bookCloseHandler(){
