@@ -27,17 +27,7 @@ class HomeController{
   }
   _bookHandler(obj){
     
-    let template = `
-      <div class='loader-container'>
-        <div class='loader-content'>
-          <div class='loader is-loading'></div>
-        </div>
-      </div>
-    `
-    let loader = document.createElement('div')
-    loader.innerHTML = template;
-    document.body.appendChild(loader.children[0]);
-    loader = document.querySelector('.loader-container');
+    spinner.render()
     
     obj._id = String(new Date().getTime());
     obj = Object.entries(obj);
@@ -65,7 +55,7 @@ class HomeController{
         this.formBook.elements.form.reset();
         this.searchCache = {};
         this.formBook.elements.container.remove();
-        loader.remove();
+        spinner.remove()
     }).catch((e)=>{
         console.log(swal);
         swal({
@@ -74,7 +64,7 @@ class HomeController{
           icon: 'error',
         })
         console.log(e);
-        loader.remove();
+        spinner.remmove();
     })
      
   }
