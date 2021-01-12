@@ -42,6 +42,9 @@ class HomeController{
     var url = new URL('https://script.google.com/macros/s/AKfycbz4wg0weFO7m8ByMP4lkNZaLpxv0IDxKaTMSIFtR2ozPamiIp8/exec'),
     params = combined;
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
+    
+    
+    console.log(url);
     fetch(url).then(response=>{
         console.log(response)
         swal({
