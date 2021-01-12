@@ -14,16 +14,7 @@ const Templates = {
             <a data-menu='about' data-name='menu'>About us</a>
             <a data-menu='faq' data-name='menu'>F.A.Q.</a>
           </div>
-        </div>        
-        <div data-name='menu_dropdown' class='menu-dropdown'>
-          <a>Services</a>
-          <div class='menu-dropdown-container menu-hidden' name='menu_dropdown'>
-            <a data-menu='junk' data-name='menu'>Junk Removal</a>
-            <a data-menu='residential' data-name='menu'>Residential Dumpster</a>
-            <a data-menu='roofig' data-name='menu'>Roofing Dumpster</a>
-          </div>
         </div>
-        <a data-name='menu' data-menu='contact'>Contact</a>
       </div>
       <div class='burger-container'>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-name='burger'>
