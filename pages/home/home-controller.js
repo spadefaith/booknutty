@@ -36,7 +36,7 @@ class HomeController{
     `
     let loader = document.createElement('div')
     loader.innerHTML = template;
-    document.appendChild(loader);
+    document.body.appendChild(loader);
     
     
     
