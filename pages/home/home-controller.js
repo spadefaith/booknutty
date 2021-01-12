@@ -41,7 +41,7 @@ class HomeController{
       return accu;
     }, {})
     
-    var url = new URL('https://script.google.com/macros/s/AKfycbywV58e7Xv8-8leKCTy6WQEk7NpYz1Pml6Hw1mY08GDNwA2oNANl-Ou/exec'),
+    var url = new URL('https://script.google.com/macros/s/AKfycbxTbUoSZ9ShGpGp8keKWomgxXauKoD5lAwwY2EVt05nPClCHd0JhqSV/exec'),
     params = combined;
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
     fetch(url).then(response=>{
