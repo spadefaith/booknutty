@@ -67,7 +67,7 @@ class HomeController{
         this.formBook.elements.form.reset();
         this.searchCache = {};
         this.formBook.elements.container.remove();
-        loader.remove();
+        //loader.remove();
     }).catch((e)=>{
         console.log(swal);
         swal({
@@ -76,7 +76,7 @@ class HomeController{
           icon: 'error',
         })
         console.log(e);
-        loader.remove();
+        //loader.remove();
     })
      
   }
