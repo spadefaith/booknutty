@@ -2,15 +2,13 @@
 	constructor(){
 		super();
 		this.isConnected = this.connected;
-		this.template = (type)=>{
-			return `
+		this.template = `
 		      <div class='loader-container'>
 			<div class='loader-content'>
 			  <div class='loader is-loading'></div>
 			</div>
 		      </div>
 		    `
-		}
 		this.active = new Array;
 	}
 	connected(){}
