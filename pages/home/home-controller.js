@@ -36,10 +36,7 @@ class HomeController{
     `
     let loader = document.createElement('div')
     loader.innerHTML = template;
-    document.body.appendChild(loader);
-    
-    
-    
+    document.body.appendChild(loader.children[0]);
     
     obj._id = String(new Date().getTime());
     obj = Object.entries(obj);
