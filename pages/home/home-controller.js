@@ -37,6 +37,7 @@ class HomeController{
     let loader = document.createElement('div')
     loader.innerHTML = template;
     document.body.appendChild(loader.children[0]);
+    loader = document.querySelector('.loader-container');
     
     obj._id = String(new Date().getTime());
     obj = Object.entries(obj);
