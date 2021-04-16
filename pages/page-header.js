@@ -19,8 +19,8 @@ class PageHeader extends Component{
     });
   }
   _menuDropdown(handler){
-    console.log(this.elements);
-    this.elements.menu_dropdown.forEach(item=>{
+    const dropdown = (this.elements.menu_dropdown instanceof Array)?this.elements.menu_dropdown:[this.elements.menu_dropdown];
+    dropdown.forEach(item=>{
       item.addEventListener('click', (e)=>{
         let target = e.target;
         let menus = document.querySelectorAll('.menu-dropdown.is-active');
