@@ -19,6 +19,7 @@ class PageHeader extends Component{
     });
   }
   _menuDropdown(handler){
+    console.log(this.elements);
     this.elements.menu_dropdown.forEach(item=>{
       item.addEventListener('click', (e)=>{
         let target = e.target;
